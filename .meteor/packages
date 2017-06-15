@@ -87,6 +87,7 @@ rocketchat:message-attachments
 rocketchat:message-mark-as-unread
 rocketchat:message-pin
 rocketchat:message-star
+rocketchat:help-flextab
 rocketchat:migrations
 rocketchat:oauth2-server-config
 rocketchat:oembed
