@@ -1,0 +1,26 @@
+<template name="todos">
+	<div class="content">
+		<div class="list-view starred-messages-list">
+			<div class="title">
+				<h2>{{_ "Todos"}}</h2>
+			</div>
+			{{#if Template.subscriptionsReady}}
+				{{#unless hasTodos}}
+				<!-- TODO change do no todos -->
+					<h2>{{_ "No_starred_messages"}}</h2>
+				{{/unless}}
+			{{/if}}
+		</div>
+		<ul class="list clearfix">
+			<!-- TODO retrieve todos from actual room -->
+			{{#each todos}}
+				{{#nrr nrrargs 'todo' todo}}{{/nrr}}
+			{{/each}}
+		</ul>
+		{{#if hasMore}}
+			<div class="load-more">
+				{{> loading}}
+			</div>
+		{{/if}}
+	</div>
+</template>
