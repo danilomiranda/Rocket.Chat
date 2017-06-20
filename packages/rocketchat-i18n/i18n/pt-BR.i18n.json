@@ -731,6 +731,7 @@
   "Message_AllowPinning": "Permitir Fixar Mensagem",
   "Message_AllowPinning_Description": "Permitir que mensagens sejam fixadas em qualquer canal.",
   "Message_AllowStarring": "Permitir Mensagens Favoritas",
+  "Message_AllowTodos": "Permitir TODO nas mensagens",
   "Message_AlwaysSearchRegExp": "Sempre pesquisar usando expressões regulares",
   "Message_AlwaysSearchRegExp_Description": "Recomendamos definir `true` se o seu idioma não é suportado em <a target=\"_blank\" href=\"https://docs.mongodb.org/manual/reference/text-search-languages/#text-search-languages\">pesquisa de texto MongoDB</a> .",
   "Message_AudioRecorderEnabled": "Gravação de Áudio Habilitada",

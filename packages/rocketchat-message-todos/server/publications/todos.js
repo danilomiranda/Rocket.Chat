@@ -1,4 +1,4 @@
-Meteor.publish('starredMessages', function(rid, limit = 50) {
+Meteor.publish('todos', function(rid, limit = 50) {
 	if (!this.userId) {
 		return this.ready();
 	}
@@ -14,13 +14,13 @@ Meteor.publish('starredMessages', function(rid, limit = 50) {
 		limit
 	}).observeChanges({
 		added(_id, record) {
-			return publication.added('rocketchat_starred_message', _id, record);
+			return publication.added('rocketchat_todos', _id, record);
 		},
 		changed(_id, record) {
-			return publication.changed('rocketchat_starred_message', _id, record);
+			return publication.changed('rocketchat_todos', _id, record);
 		},
 		removed(_id) {
-			return publication.removed('rocketchat_starred_message', _id);
+			return publication.removed('rocketchat_todos', _id);
 		}
 	});
 	this.ready();
