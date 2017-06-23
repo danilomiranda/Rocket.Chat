@@ -1,19 +1,19 @@
-<template name="todos">
+<template name="tasks">
 	<div class="content">
 		<div class="list-view starred-messages-list">
 			<div class="title">
-				<h2>{{_ "Todos"}}</h2>
+				<h2>{{_ "Tasks"}}</h2>
 			</div>
 			{{#if Template.subscriptionsReady}}
-				{{#unless hasTodos}}
-				<!-- TODO change do no todos -->
-					<h2>{{_ "No_starred_messages"}}</h2>
+				{{#unless hasTasks}}
+				<!-- TODO change do no tasks -->
+					<h2>{{_ "No_tasks"}}</h2>
 				{{/unless}}
 			{{/if}}
 		</div>
 		<ul class="list clearfix">
-			<!-- TODO retrieve todos from actual room -->
-			{{#each todos}}
+			<!-- TODO retrieve tasks from actual room -->
+			{{#each tasks}}
 				{{#nrr nrrargs 'todo' todo}}{{/nrr}}
 			{{/each}}
 		</ul>

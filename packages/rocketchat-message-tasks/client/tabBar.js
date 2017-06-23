@@ -1,10 +1,10 @@
 Meteor.startup(function() {
 	return RocketChat.TabBar.addButton({
 		groups: ['channel', 'group', 'direct'],
-		id: 'todo',
-		i18nTitle: 'Todos',
+		id: 'task',
+		i18nTitle: 'Tasks',
 		icon: 'icon-check',
-		template: 'todos',
+		template: 'tasks',
 		order: 3
 	});
 });

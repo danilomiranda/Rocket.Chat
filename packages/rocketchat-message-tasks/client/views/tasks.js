@@ -1,6 +1,6 @@
 /*globals StarredMessage */
-Template.todos.helpers({
-	hasTodos() {
+Template.tasks.helpers({
+	hasTasks() {
 		return StarredMessage.find({
 			rid: this.rid
 		}, {

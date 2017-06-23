@@ -1,7 +1,7 @@
 Package.describe({
-	name: 'rocketchat:message-todos',
+	name: 'rocketchat:message-tasks',
 	version: '0.0.1',
-	summary: 'Todos',
+	summary: 'Tasks',
 	git: ''
 });
 
@@ -17,19 +17,19 @@ Package.onUse(function(api) {
 	api.use('templating', 'client');
 
 	api.addFiles([
-		'client/lib/Todos.js',
+		'client/lib/Tasks.js',
 		'client/actionButton.js',
-		'client/todos.js',
+		'client/tasks.js',
 		'client/tabBar.js',
-		'client/views/todos.html',
-		'client/views/todos.js',
-		'client/views/stylesheets/todos.less'
+		'client/views/tasks.html',
+		'client/views/tasks.js',
+		'client/views/stylesheets/tasks.less'
 	], 'client');
 
 	api.addFiles([
 		'server/settings.js',
-		'server/starMessage.js',
-		'server/publications/todos.js',
+		'server/newTask.js',
+		'server/publications/tasks.js',
 		'server/startup/indexes.js'
 	], 'server');
 });

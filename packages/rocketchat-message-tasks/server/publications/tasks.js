@@ -1,4 +1,4 @@
-Meteor.publish('todos', function(rid, limit = 50) {
+Meteor.publish('tasks', function(rid, limit = 50) {
 	if (!this.userId) {
 		return this.ready();
 	}
@@ -14,13 +14,13 @@ Meteor.publish('todos', function(rid, limit = 50) {
 		limit
 	}).observeChanges({
 		added(_id, record) {
-			return publication.added('rocketchat_todos', _id, record);
+			return publication.added('rocketchat_tasks', _id, record);
 		},
 		changed(_id, record) {
-			return publication.changed('rocketchat_todos', _id, record);
+			return publication.changed('rocketchat_tasks', _id, record);
 		},
 		removed(_id) {
-			return publication.removed('rocketchat_todos', _id);
+			return publication.removed('rocketchat_tasks', _id);
 		}
 	});
 	this.ready();

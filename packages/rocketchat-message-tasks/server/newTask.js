@@ -1,5 +1,5 @@
 Meteor.methods({
-	starMessage(message) {
+	newTask(message) {
 		if (!Meteor.userId()) {
 			throw new Meteor.Error('error-invalid-user', 'Invalid user', {
 				method: 'starMessage'
@@ -18,4 +18,3 @@ Meteor.methods({
 		return RocketChat.models.Messages.updateUserStarById(message._id, Meteor.userId(), message.starred);
 	}
 });
-

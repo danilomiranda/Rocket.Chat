@@ -1,15 +1,15 @@
 Meteor.methods({
-	checkTodo(message) {
+	checkTask(message) {
 		if (!Meteor.userId()) {
 			return false;
 		}
 		if (RocketChat.models.Subscriptions.findOne({ rid: todo.rid }) == null) {
 			return false;
 		}
-		if (!RocketChat.settings.get('Todo_AllowStarring')) {
+		if (!RocketChat.settings.get('Message_AllowTasks')) {
 			return false;
 		}
-		return Todo.update({
+		return Tasks.update({
 			_id: message._id
 		}, {
 			$set: {
