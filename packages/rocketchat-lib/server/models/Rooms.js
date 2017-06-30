@@ -9,6 +9,7 @@ class ModelRooms extends RocketChat.models._Base {
 		this.tryEnsureIndex({ 'u._id': 1 });
 
 		this.cache.ignoreUpdatedFields.push('msgs', 'lm');
+		this.cache.ignoreUpdatedFields.push('txts', 'lm');
 		this.cache.ensureIndex(['t', 'name'], 'unique');
 		this.cache.options = {fields: {usernames: 0}};
 	}
@@ -507,6 +508,19 @@ class ModelRooms extends RocketChat.models._Base {
 		const update = {
 			$inc: {
 				msgs: inc
+			}
+		};
+
+		return this.update(query, update);
+	}
+
+	incTasksCountById(_id, inc) {
+		if (inc == null) { inc = 1; }
+		const query = {_id};
+
+		const update = {
+			$inc: {
+				txts: inc
 			}
 		};
 
