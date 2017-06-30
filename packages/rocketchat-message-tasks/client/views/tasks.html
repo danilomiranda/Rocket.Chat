@@ -4,6 +4,14 @@
 			<div class="title">
 				<h2>{{_ "Tasks"}}</h2>
 			</div>
+			<div class="control">
+				<form class="search-form" role="form">
+					<div class="input-line search">
+						<input type="text" id="task-search" class="search content-background-color" placeholder="{{tSearchTasks}}" autocomplete="off" />
+						<i class="icon-search secondary-font-color"></i>
+					</div>
+				</form>
+			</div>
 			{{#if Template.subscriptionsReady}}
 				{{#unless hasTasks}}
 				<!-- TODO change do no tasks -->

@@ -9,6 +9,12 @@ Template.tasks.helpers({
 			}
 		}).count() > 0;
 	},
+
+	tSearchTasks() {
+		return t('Search_Tasks');
+	},
+
+	//TODO remove code from the old package
 	messages() {
 		return StarredMessage.find({
 			rid: this.rid
